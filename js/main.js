@@ -429,24 +429,26 @@
     }, 120);
   }
 
-  document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
-  document.getElementById('lightbox-prev').addEventListener('click', function () {
-    current = (current - 1 + activeItems.length) % activeItems.length;
-    renderLightbox();
-  });
-  document.getElementById('lightbox-next').addEventListener('click', function () {
-    current = (current + 1) % activeItems.length;
-    renderLightbox();
-  });
-  lightbox.addEventListener('click', function (e) {
-    if (e.target === lightbox) closeLightbox();
-  });
-  document.addEventListener('keydown', function (e) {
-    if (lightbox.classList.contains('hidden')) return;
-    if (e.key === 'Escape') closeLightbox();
-    if (e.key === 'ArrowLeft') { current = (current + 1) % activeItems.length; renderLightbox(); }
-    if (e.key === 'ArrowRight') { current = (current - 1 + activeItems.length) % activeItems.length; renderLightbox(); }
-  });
+  if (lightbox) {
+    document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+    document.getElementById('lightbox-prev').addEventListener('click', function () {
+      current = (current - 1 + activeItems.length) % activeItems.length;
+      renderLightbox();
+    });
+    document.getElementById('lightbox-next').addEventListener('click', function () {
+      current = (current + 1) % activeItems.length;
+      renderLightbox();
+    });
+    lightbox.addEventListener('click', function (e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (lightbox.classList.contains('hidden')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') { current = (current + 1) % activeItems.length; renderLightbox(); }
+      if (e.key === 'ArrowRight') { current = (current - 1 + activeItems.length) % activeItems.length; renderLightbox(); }
+    });
+  }
 
   /* ============================================================
      عارض ملفات PDF (صفحة الهبوط فقط)
