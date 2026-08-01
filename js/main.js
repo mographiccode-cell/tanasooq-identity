@@ -468,7 +468,7 @@
         frame.style.opacity = '0';
         setTimeout(function () {
           frame.src = tab.dataset.src;
-          openLink.href = tab.dataset.src;
+          if (openLink) openLink.href = tab.dataset.src;
           if (downloadLink) downloadLink.href = tab.dataset.src;
           if (docTitle) docTitle.textContent = tab.dataset.title || tab.textContent.trim();
           if (docMeta) docMeta.textContent = tab.dataset.meta || '';
@@ -477,7 +477,7 @@
       });
     });
 
-    fullscreenBtn.addEventListener('click', function () {
+    if (fullscreenBtn) fullscreenBtn.addEventListener('click', function () {
       if (!stage) return;
       if (!document.fullscreenElement) {
         if (stage.requestFullscreen) stage.requestFullscreen();

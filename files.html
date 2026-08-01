@@ -69,24 +69,25 @@
       <div class="container-site">
         <div data-reveal class="relative overflow-hidden rounded-[1.75rem] border border-brand-200/70 bg-white shadow-glow dark:border-white/10 dark:bg-[#150F22]">
 
-          <!-- شريط العنوان والتبويبات -->
+          <!-- شريط الملفات تحت الناف بار -->
           <div class="border-b border-brand-100 bg-brand-50/60 dark:border-white/10 dark:bg-[#120B1E]">
-            <div class="flex flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6">
-              <div id="pdf-tabs" class="flex flex-wrap gap-2">
-                <button type="button" data-src="assets/pdf/proposal.pdf" data-title="البروبوزال — مقترح المشروع" data-meta="١٥ صفحة موثقة" class="pdf-tab active rounded-xl bg-hero-gradient px-4 py-2 text-sm font-medium text-white shadow-soft">البروبوزال — مقترح المشروع</button>
-                <button type="button" data-src="assets/pdf/identity-guide.pdf" data-title="دليل الهوية البصرية" data-meta="٤٣ صفحة شاملة" class="pdf-tab rounded-xl border border-brand-200 bg-white px-4 py-2 text-sm font-medium text-brand-700 transition hover:border-brand-400 dark:border-white/10 dark:bg-night-800 dark:text-brand-200">دليل الهوية البصرية</button>
-              </div>
-              <div class="flex items-center gap-2">
-                <button id="pdf-fullscreen" type="button" class="inline-flex items-center gap-2 rounded-xl border border-brand-200 bg-white px-4 py-2 text-sm font-medium text-brand-700 transition hover:bg-brand-50 dark:border-white/10 dark:bg-night-800 dark:text-brand-200">
-                  <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
-                  شاشة كاملة
+            <div class="flex items-center gap-3 px-4 py-3 sm:px-6">
+              <span class="hidden shrink-0 items-center gap-2 text-xs font-medium text-brand-600 sm:inline-flex dark:text-brand-300">
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 10h16M4 14h10M4 18h7"/></svg>
+                ملفات المشروع:
+              </span>
+              <div id="pdf-tabs" class="flex gap-2 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                <button type="button" data-src="assets/pdf/proposal.pdf" data-title="البروبوزال — مقترح المشروع" data-meta="١٥ صفحة · 1.3MB" class="pdf-tab active flex shrink-0 items-center gap-2 rounded-xl bg-hero-gradient px-4 py-2 text-sm font-medium text-white shadow-soft">
+                  <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 4h7l4 4v12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm7 0v4h4"/></svg>
+                  البروبوزال — مقترح المشروع
                 </button>
-                <a id="pdf-open" href="assets/pdf/proposal.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-xl border border-accent-200 bg-accent-50 px-4 py-2 text-sm font-medium text-accent-700 transition hover:bg-accent-100 dark:border-accent-800/60 dark:bg-accent-900/30 dark:text-accent-300">
-                  <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 4h6v6M20 4 11 13M10 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-4"/></svg>
-                  فتح جديد
-                </a>
+                <button type="button" data-src="assets/pdf/identity-guide.pdf" data-title="دليل الهوية البصرية" data-meta="٤٣ صفحة · 2.5MB" class="pdf-tab flex shrink-0 items-center gap-2 rounded-xl border border-brand-200 bg-white px-4 py-2 text-sm font-medium text-brand-700 transition hover:border-brand-400 dark:border-white/10 dark:bg-night-800 dark:text-brand-200">
+                  <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 4h7l4 4v12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm7 0v4h4"/></svg>
+                  دليل الهوية البصرية
+                </button>
               </div>
             </div>
+          </div>
             <div class="flex flex-wrap items-center justify-between gap-2 border-t border-brand-100/70 bg-white/60 px-4 py-2.5 sm:px-6 dark:border-white/5 dark:bg-[#1B1229]/60">
               <div class="flex min-w-0 items-center gap-2.5">
                 <span class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-hero-gradient text-white">
