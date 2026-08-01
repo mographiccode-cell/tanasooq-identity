@@ -490,7 +490,7 @@
   }
 
   /* ============================================================
-     خفوت حركة الكل عند الطلب
+     خفض حركة الكل عند الطلب
      ============================================================ */
   @media (prefers-reduced-motion: reduce) {
     .marquee-track,
@@ -508,5 +508,87 @@
     }
     .chip-enter { animation: none !important; }
     html { scroll-behavior: auto; }
+  }
+
+  /* ============================================================
+     منصة العرض التقديمي — الشرائح
+     ============================================================ */
+  .slide-stage {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+  }
+  .slide {
+    position: absolute;
+    inset: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(26px) scale(0.985);
+    transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+      visibility 0s linear 0.55s;
+  }
+  .slide.is-active {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+      visibility 0s;
+    z-index: 2;
+  }
+  .slide-enter {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  .slide.is-active .slide-enter {
+    animation: slideIn 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: var(--d, 0ms);
+  }
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: none; }
+  }
+  .slide-notes {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.45s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.35s;
+  }
+  .slide-notes.open {
+    max-height: 24rem;
+    opacity: 1;
+  }
+  .slide-key {
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0s linear 0.3s;
+  }
+  .slide-key.open {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s;
+  }
+  .slide-key .key-panel {
+    transform: translateY(14px) scale(0.98);
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .slide-key.open .key-panel {
+    transform: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .slide, .slide-enter, .slide.is-active .slide-enter, .slide-notes, .slide-key, .slide-key .key-panel {
+      animation: none !important;
+      transition: none !important;
+      opacity: 1;
+    }
+    .slide-enter { opacity: 1; transform: none; }
   }
 }
