@@ -404,6 +404,15 @@
     70%, 100% { transform: scale(1.32); opacity: 0; }
   }
 
+  /* هالة متدرجة تدور حول الشعار */
+  .orbit-halo {
+    background: conic-gradient(from 0deg, #553A96, #B12C91, #C0ADDE, #7A4BA6, #553A96);
+    -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 7px), #000 calc(100% - 6px));
+    mask: radial-gradient(farthest-side, transparent calc(100% - 7px), #000 calc(100% - 6px));
+    animation: orbitSpin 9s linear infinite;
+    will-change: transform;
+  }
+
   /* بطاقات الأهمية — أكورديون هادئ */
   .impact-item {
     transition:
@@ -507,6 +516,7 @@
     .orbit-slow,
     .orbit-core,
     .orbit-pulse,
+    .orbit-halo,
     .goal-line {
       animation: none !important;
     }
