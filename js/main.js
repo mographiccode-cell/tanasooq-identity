@@ -453,6 +453,9 @@
      ============================================================ */
   var frame = document.getElementById('pdf-frame');
   var openLink = document.getElementById('pdf-open');
+  var downloadLink = document.getElementById('pdf-download');
+  var docTitle = document.getElementById('pdf-doc-title');
+  var docMeta = document.getElementById('pdf-doc-meta');
   var fullscreenBtn = document.getElementById('pdf-fullscreen');
   var stage = document.getElementById('pdf-stage');
   var tabs = document.querySelectorAll('.pdf-tab');
@@ -466,6 +469,9 @@
         setTimeout(function () {
           frame.src = tab.dataset.src;
           openLink.href = tab.dataset.src;
+          if (downloadLink) downloadLink.href = tab.dataset.src;
+          if (docTitle) docTitle.textContent = tab.dataset.title || tab.textContent.trim();
+          if (docMeta) docMeta.textContent = tab.dataset.meta || '';
           frame.style.opacity = '1';
         }, 180);
       });
@@ -479,6 +485,16 @@
       } else if (document.exitFullscreen) {
         document.exitFullscreen();
       }
+    });
+
+    document.querySelectorAll('.doc-go').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        var target = link.dataset.src;
+        var tab = Array.prototype.slice.call(tabs).filter(function (t) { return t.dataset.src === target; })[0];
+        if (tab) { e.preventDefault(); tab.click(); }
+        var files = document.getElementById('files');
+        if (files) files.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
     });
   }
 

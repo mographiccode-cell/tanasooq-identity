@@ -65,10 +65,9 @@
   <main id="top">
 
     <!-- ======================= ترويسة الصفحة ======================= -->
-    <section class="relative overflow-hidden pb-16 pt-32 sm:pt-36">
+    <section class="relative overflow-hidden pb-10 pt-28 sm:pt-32">
       <div class="pointer-events-none absolute inset-0 bg-radial-fade dark:bg-[#120B1E]"></div>
       <div class="aura pointer-events-none absolute -top-24 left-1/4 h-80 w-80 rounded-full bg-accent-400/20 blur-3xl dark:bg-accent-600/25"></div>
-      <div class="aura pointer-events-none absolute top-44 right-1/5 h-72 w-72 rounded-full bg-brand-400/15 blur-3xl [animation-delay:-7s] dark:bg-brand-600/20"></div>
 
       <div class="container-site relative">
         <nav data-reveal class="flex items-center gap-2 text-xs text-[#8B7DA5] dark:text-night-400" aria-label="مسار التنقل">
@@ -77,67 +76,84 @@
           <span class="font-medium text-brand-600 dark:text-brand-300">ملفات المشروع</span>
         </nav>
 
-        <div class="mt-8 grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
-          <div data-reveal>
-            <span class="inline-flex items-center gap-2.5 rounded-full border border-brand-200/80 bg-white/70 px-4 py-1.5 text-xs font-medium tracking-wide text-brand-700 shadow-card backdrop-blur dark:border-white/10 dark:bg-night-900/70 dark:text-brand-200">
-              <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 4h7l4 4v12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm7 0v4h4"/></svg>
-              الملفات
-            </span>
-            <h1 class="display-title mt-6 text-[#231536] dark:text-white">المستندات الرسمية للمشروع</h1>
-            <p class="mt-6 max-w-2xl text-base leading-9 text-[#5D4F78] sm:text-lg sm:leading-10 dark:text-night-200">
+        <div data-reveal class="mt-7 flex flex-wrap items-end justify-between gap-6">
+          <div>
+            <h1 class="display-title text-[#231536] dark:text-white">المستندات الرسمية للمشروع</h1>
+            <p class="mt-4 max-w-2xl text-base leading-9 text-[#5D4F78] sm:text-lg sm:leading-10 dark:text-night-200">
               تصفّح الملفات داخل الموقع مباشرة دون تحميل — البروبوزال الكامل ودليل الهوية البصرية.
             </p>
           </div>
-
-          <!-- وثيقة مصغّرة في الترويسة -->
-          <div data-reveal="scale" style="--d:150ms" class="relative mx-auto hidden w-full max-w-sm lg:block" aria-hidden="true">
-            <div class="pointer-events-none absolute -inset-6 rounded-[2rem] bg-hero-gradient opacity-10 blur-3xl"></div>
-            <div class="glass-panel relative rounded-3xl border border-white/70 p-7 shadow-soft dark:border-white/10">
-              <div class="flex items-center justify-between">
-                <span class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-hero-gradient text-white shadow-soft">
-                  <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 4h7l4 4v12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm7 0v4h4"/></svg>
-                </span>
-                <span class="flex items-center gap-1.5 text-[11px] text-[#8B7DA5] dark:text-night-400">
-                  <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-500"></span>
-                  متاح للعرض
-                </span>
-              </div>
-              <p class="mt-6 text-lg font-semibold text-[#231536] dark:text-white">بروبوزال المشروع</p>
-              <p class="mt-2 text-xs leading-6 text-[#8B7DA5] dark:text-night-400">مقترح مشروع التخرج — ١٥ صفحة موثقة</p>
-              <div class="mt-5 flex items-center gap-2">
-                <span class="h-2 w-2 rotate-45 bg-accent-500"></span>
-                <span class="text-[11px] text-brand-500 dark:text-brand-300">PDF · عرض مباشر</span>
-              </div>
-            </div>
+          <div class="flex flex-wrap gap-3">
+            <a href="#proposal-card" data-src="assets/pdf/proposal.pdf" class="doc-go inline-flex items-center gap-2 rounded-2xl border border-brand-200 bg-white/80 px-4 py-2.5 text-sm font-medium text-brand-700 backdrop-blur transition hover:border-brand-400 hover:bg-brand-50 dark:border-white/10 dark:bg-night-900/80 dark:text-brand-200 dark:hover:bg-night-800">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 4h7l4 4v12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm7 0v4h4"/></svg>
+              البروبوزال
+            </a>
+            <a href="#guide-card" data-src="assets/pdf/identity-guide.pdf" class="doc-go inline-flex items-center gap-2 rounded-2xl border border-brand-200 bg-white/80 px-4 py-2.5 text-sm font-medium text-brand-700 backdrop-blur transition hover:border-brand-400 hover:bg-brand-50 dark:border-white/10 dark:bg-night-900/80 dark:text-brand-200 dark:hover:bg-night-800">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 4h7l4 4v12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm7 0v4h4"/></svg>
+              دليل الهوية
+            </a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ======================= ملفات المشروع ======================= -->
-    <section id="files" class="section-pad relative overflow-hidden border-t border-brand-100/70 bg-white dark:border-white/5 dark:bg-[#150F22]">
+    <section id="files" class="relative overflow-hidden border-t border-brand-100/70 bg-white pb-10 pt-10 dark:border-white/5 dark:bg-[#150F22]">
       <div class="container-site">
         <div data-reveal class="relative overflow-hidden rounded-[1.75rem] border border-brand-200/70 bg-white shadow-glow dark:border-white/10 dark:bg-[#150F22]">
-          <div class="flex flex-wrap items-center justify-between gap-3 border-b border-brand-100 bg-brand-50/60 px-4 py-3 dark:border-white/10 dark:bg-[#120B1E] sm:px-6">
-            <div id="pdf-tabs" class="flex flex-wrap gap-2">
-              <button type="button" data-src="assets/pdf/proposal.pdf" class="pdf-tab active rounded-xl bg-hero-gradient px-4 py-2 text-sm font-medium text-white shadow-soft">البروبوزال — مقترح المشروع</button>
-              <button type="button" data-src="assets/pdf/identity-guide.pdf" class="pdf-tab rounded-xl border border-brand-200 bg-white px-4 py-2 text-sm font-medium text-brand-700 transition hover:border-brand-400 dark:border-white/10 dark:bg-night-800 dark:text-brand-200">دليل الهوية البصرية</button>
+
+          <!-- شريط العنوان والتبويبات -->
+          <div class="border-b border-brand-100 bg-brand-50/60 dark:border-white/10 dark:bg-[#120B1E]">
+            <div class="flex flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6">
+              <div id="pdf-tabs" class="flex flex-wrap gap-2">
+                <button type="button" data-src="assets/pdf/proposal.pdf" data-title="البروبوزال — مقترح المشروع" data-meta="١٥ صفحة موثقة" class="pdf-tab active rounded-xl bg-hero-gradient px-4 py-2 text-sm font-medium text-white shadow-soft">البروبوزال — مقترح المشروع</button>
+                <button type="button" data-src="assets/pdf/identity-guide.pdf" data-title="دليل الهوية البصرية" data-meta="٤٣ صفحة شاملة" class="pdf-tab rounded-xl border border-brand-200 bg-white px-4 py-2 text-sm font-medium text-brand-700 transition hover:border-brand-400 dark:border-white/10 dark:bg-night-800 dark:text-brand-200">دليل الهوية البصرية</button>
+              </div>
+              <div class="flex items-center gap-2">
+                <button id="pdf-fullscreen" type="button" class="inline-flex items-center gap-2 rounded-xl border border-brand-200 bg-white px-4 py-2 text-sm font-medium text-brand-700 transition hover:bg-brand-50 dark:border-white/10 dark:bg-night-800 dark:text-brand-200">
+                  <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+                  شاشة كاملة
+                </button>
+                <a id="pdf-open" href="assets/pdf/proposal.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-xl border border-accent-200 bg-accent-50 px-4 py-2 text-sm font-medium text-accent-700 transition hover:bg-accent-100 dark:border-accent-800/60 dark:bg-accent-900/30 dark:text-accent-300">
+                  <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 4h6v6M20 4 11 13M10 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-4"/></svg>
+                  فتح جديد
+                </a>
+              </div>
             </div>
+            <div class="flex flex-wrap items-center justify-between gap-2 border-t border-brand-100/70 bg-white/60 px-4 py-2.5 sm:px-6 dark:border-white/5 dark:bg-[#1B1229]/60">
+              <div class="flex min-w-0 items-center gap-2.5">
+                <span class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-hero-gradient text-white">
+                  <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 4h7l4 4v12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm7 0v4h4"/></svg>
+                </span>
+                <p id="pdf-doc-title" class="truncate text-sm font-semibold text-[#231536] dark:text-white">البروبوزال — مقترح المشروع</p>
+                <span id="pdf-doc-meta" class="hidden shrink-0 rounded-full border border-brand-200 px-2.5 py-0.5 text-[11px] text-brand-600 sm:inline dark:border-white/10 dark:text-brand-300">١٥ صفحة موثقة</span>
+              </div>
+              <div class="flex items-center gap-1.5 text-[11px] text-[#8B7DA5] dark:text-night-400">
+                <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-500"></span>
+                متاح للعرض المباشر
+              </div>
+            </div>
+          </div>
+
+          <!-- العارض -->
+          <div id="pdf-stage" class="relative bg-[#EAE6F1] dark:bg-[#0D0816]">
+            <iframe id="pdf-frame" src="assets/pdf/proposal.pdf" title="عرض ملف PDF" class="h-[calc(100dvh-13rem)] min-h-[32rem] w-full bg-white transition-opacity duration-300" loading="lazy"></iframe>
+          </div>
+
+          <!-- شريط الإجراءات أسفل العارض -->
+          <div class="flex flex-wrap items-center justify-between gap-3 border-t border-brand-100 bg-brand-50/40 px-4 py-3 sm:px-6 dark:border-white/5 dark:bg-[#120B1E]">
+            <p class="text-xs leading-6 text-[#8B7DA5] dark:text-night-400">عند فتح الموقع مباشرة من القرص دون خادم قد يطلب المتصفح معالجة مختلفة للـPDF — استخدم «فتح جديد» أو أي خادم بسيط.</p>
             <div class="flex items-center gap-2">
-              <button id="pdf-fullscreen" type="button" class="inline-flex items-center gap-2 rounded-xl border border-brand-200 bg-white px-4 py-2 text-sm font-medium text-brand-700 transition hover:bg-brand-50 dark:border-white/10 dark:bg-night-800 dark:text-brand-200">
-                <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
-                شاشة كاملة
-              </button>
-              <a id="pdf-open" href="assets/pdf/proposal.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-xl border border-accent-200 bg-accent-50 px-4 py-2 text-sm font-medium text-accent-700 transition hover:bg-accent-100 dark:border-accent-800/60 dark:bg-accent-900/30 dark:text-accent-300">
-                <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 4h6v6M20 4 11 13M10 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-4"/></svg>
-                فتح جديد
+              <a id="pdf-download" href="assets/pdf/proposal.pdf" download class="inline-flex items-center gap-2 rounded-xl bg-hero-gradient px-4 py-2 text-sm font-medium text-white shadow-soft transition hover:brightness-110">
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0 4-4m-4 4-4-4M4 19h16"/></svg>
+                تحميل الملف
+              </a>
+              <a href="#top" class="inline-flex items-center gap-2 rounded-xl border border-brand-200 bg-white px-4 py-2 text-sm font-medium text-brand-700 transition hover:bg-brand-50 dark:border-white/10 dark:bg-night-800 dark:text-brand-200">
+                <svg class="h-4 w-4 rotate-180" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15 12 8l7 7"/></svg>
+                الأعلى
               </a>
             </div>
           </div>
-          <div id="pdf-stage" class="relative">
-            <iframe id="pdf-frame" src="assets/pdf/proposal.pdf" title="عرض ملف PDF" class="h-[72vh] w-full bg-white transition-opacity duration-300" loading="lazy"></iframe>
-          </div>
-          <p class="border-t border-brand-100 bg-brand-50/40 px-6 py-3 text-xs leading-6 text-[#8B7DA5] dark:border-white/5 dark:bg-[#120B1E] dark:text-night-400">ملاحظة: عند فتح الموقع مباشرة من القرص دون خادم، قد يطلب المتصفح معالجة مختلفة للـPDF — استخدم زر «فتح جديد» أو شغّل الموقع عبر أي خادم بسيط.</p>
         </div>
       </div>
     </section>
