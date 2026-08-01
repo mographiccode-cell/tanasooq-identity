@@ -1,0 +1,12 @@
+{
+  "name": "tanasooq-site",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  },
+  "scripts": {
+    "build": "tailwindcss -i ./css/input.css -o ./css/style.css --minify",
+    "watch": "tailwindcss -i ./css/input.css -o ./css/style.css --watch"
+  }
+}

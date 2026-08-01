@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مصطلحات المشروع — تناسق للحلول الإبداعية</title>
+  <meta name="description" content="المفاهيم الرئيسة التي بُني عليها مشروع تصميم هوية بصرية متكاملة لشركة تناسق للحلول الإبداعية">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body data-page="sub" class="grain min-h-screen overflow-x-hidden">
+
+  <!-- سطر تقدم التمرير -->
+  <div class="scroll-progress fixed inset-x-0 top-0 z-[80] h-[3px] scale-x-0 bg-hero-gradient"></div>
+
+  <!-- ======================= التنقل ======================= -->
+  <header id="site-header" class="fixed inset-x-0 top-0 z-[70] border-b border-transparent transition-all duration-500">
+    <div class="container-site flex h-16 items-center justify-between gap-4">
+      <a href="index.html" class="group flex items-center gap-3" aria-label="تناسق — الصفحة الرئيسية">
+        <span class="relative inline-flex h-10 w-10 items-center justify-center overflow-hidden rounded-2xl bg-hero-gradient text-lg font-semibold text-white shadow-soft transition-transform duration-500 group-hover:rotate-[8deg] group-hover:scale-105">ت</span>
+        <span class="leading-tight">
+          <span class="block text-base font-semibold text-[#231536] dark:text-white">تناسق</span>
+          <span class="block text-[11px] tracking-[0.08em] text-brand-500 dark:text-brand-300">للحلول الإبداعية</span>
+        </span>
+      </a>
+
+      <nav id="nav-links" class="hidden items-center gap-0.5 xl:flex">
+        <a href="index.html" class="nav-link rounded-xl px-2.5 py-2 text-[13px] text-[#46385E] transition hover:bg-brand-50/80 hover:text-brand-700 dark:text-night-100 dark:hover:bg-white/5 dark:hover:text-brand-200">الرئيسية</a>
+        <a href="about.html" class="nav-link rounded-xl px-2.5 py-2 text-[13px] text-[#46385E] transition hover:bg-brand-50/80 hover:text-brand-700 dark:text-night-100 dark:hover:bg-white/5 dark:hover:text-brand-200">عن المشروع</a>
+        <a href="importance.html" class="nav-link rounded-xl px-2.5 py-2 text-[13px] text-[#46385E] transition hover:bg-brand-50/80 hover:text-brand-700 dark:text-night-100 dark:hover:bg-white/5 dark:hover:text-brand-200">الأهمية</a>
+        <a href="objectives.html" class="nav-link rounded-xl px-2.5 py-2 text-[13px] text-[#46385E] transition hover:bg-brand-50/80 hover:text-brand-700 dark:text-night-100 dark:hover:bg-white/5 dark:hover:text-brand-200">الأهداف</a>
+        <a href="scope.html" class="nav-link rounded-xl px-2.5 py-2 text-[13px] text-[#46385E] transition hover:bg-brand-50/80 hover:text-brand-700 dark:text-night-100 dark:hover:bg-white/5 dark:hover:text-brand-200">الحدود</a>
+        <a href="terms.html" class="nav-link rounded-xl px-2.5 py-2 text-[13px] font-medium text-brand-700 dark:text-brand-200">المصطلحات</a>
+        <a href="brand.html" class="nav-link rounded-xl px-2.5 py-2 text-[13px] text-[#46385E] transition hover:bg-brand-50/80 hover:text-brand-700 dark:text-night-100 dark:hover:bg-white/5 dark:hover:text-brand-200">الهوية</a>
+        <a href="works.html" class="nav-link rounded-xl px-2.5 py-2 text-[13px] font-medium text-accent-600 dark:text-accent-300">الأعمال</a>
+        <a href="files.html" class="nav-link rounded-xl px-2.5 py-2 text-[13px] text-[#46385E] transition hover:bg-brand-50/80 hover:text-brand-700 dark:text-night-100 dark:hover:bg-white/5 dark:hover:text-brand-200">الملفات</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <button id="theme-toggle" type="button" aria-label="تبديل المظهر" class="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-brand-200/70 bg-white/70 text-brand-600 backdrop-blur transition-all duration-300 hover:rotate-12 hover:border-brand-400 active:scale-90 dark:border-white/10 dark:bg-night-900/70 dark:text-brand-200">
+          <svg id="icon-moon" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+          <svg id="icon-sun" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path stroke-linecap="round" d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <button id="menu-toggle" type="button" aria-label="القائمة" class="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-brand-200/70 bg-white/70 text-brand-600 backdrop-blur xl:hidden dark:border-white/10 dark:bg-night-900/70 dark:text-brand-200">
+          <svg id="menu-icon-open" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg id="menu-icon-close" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden border-t border-brand-100/70 xl:hidden">
+      <nav class="container-site grid gap-1 py-4">
+        <a href="index.html" class="rounded-xl px-3 py-2.5 text-sm text-[#46385E] hover:bg-brand-50 dark:text-night-100 dark:hover:bg-white/5">الرئيسية</a>
+        <a href="about.html" class="rounded-xl px-3 py-2.5 text-sm text-[#46385E] hover:bg-brand-50 dark:text-night-100 dark:hover:bg-white/5">عن المشروع</a>
+        <a href="importance.html" class="rounded-xl px-3 py-2.5 text-sm text-[#46385E] hover:bg-brand-50 dark:text-night-100 dark:hover:bg-white/5">أهمية المشروع</a>
+        <a href="objectives.html" class="rounded-xl px-3 py-2.5 text-sm text-[#46385E] hover:bg-brand-50 dark:text-night-100 dark:hover:bg-white/5">أهداف المشروع</a>
+        <a href="scope.html" class="rounded-xl px-3 py-2.5 text-sm text-[#46385E] hover:bg-brand-50 dark:text-night-100 dark:hover:bg-white/5">حدود المشروع</a>
+        <a href="terms.html" class="rounded-xl px-3 py-2.5 text-sm font-medium text-brand-700 dark:text-brand-200">مصطلحات المشروع</a>
+        <a href="brand.html" class="rounded-xl px-3 py-2.5 text-sm text-[#46385E] hover:bg-brand-50 dark:text-night-100 dark:hover:bg-white/5">هوية تناسق</a>
+        <a href="works.html" class="rounded-xl px-3 py-2.5 text-sm font-medium text-accent-600 dark:text-accent-300">معرض الأعمال</a>
+        <a href="files.html" class="rounded-xl px-3 py-2.5 text-sm text-[#46385E] hover:bg-brand-50 dark:text-night-100 dark:hover:bg-white/5">ملفات المشروع</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ======================= ترويسة الصفحة ======================= -->
+    <section class="relative overflow-hidden pb-16 pt-32 sm:pt-36">
+      <div class="pointer-events-none absolute inset-0 bg-radial-fade dark:bg-[#120B1E]"></div>
+      <div class="aura pointer-events-none absolute -top-24 left-1/4 h-80 w-80 rounded-full bg-accent-400/20 blur-3xl dark:bg-accent-600/25"></div>
+      <div class="aura pointer-events-none absolute top-44 right-1/5 h-72 w-72 rounded-full bg-brand-400/15 blur-3xl [animation-delay:-7s] dark:bg-brand-600/20"></div>
+
+      <div class="container-site relative">
+        <nav data-reveal class="flex items-center gap-2 text-xs text-[#8B7DA5] dark:text-night-400" aria-label="مسار التنقل">
+          <a href="index.html" class="transition hover:text-brand-600 dark:hover:text-brand-300">الرئيسية</a>
+          <svg class="h-3.5 w-3.5 rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          <span class="font-medium text-brand-600 dark:text-brand-300">مصطلحات المشروع</span>
+        </nav>
+
+        <div class="mt-8 grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
+          <div data-reveal>
+            <span class="inline-flex items-center gap-2.5 rounded-full border border-brand-200/80 bg-white/70 px-4 py-1.5 text-xs font-medium tracking-wide text-brand-700 shadow-card backdrop-blur dark:border-white/10 dark:bg-night-900/70 dark:text-brand-200">
+              <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 10h16M4 14h10M4 18h7"/></svg>
+              المفاهيم
+            </span>
+            <h1 class="display-title mt-6 text-[#231536] dark:text-white">المصطلحات التي تُقرأ بها هذه الهوية</h1>
+            <p class="mt-6 max-w-2xl text-base leading-9 text-[#5D4F78] sm:text-lg sm:leading-10 dark:text-night-200">
+              لغة مشتركة بين الباحث والقارئ — ستة مفاهيم أساسية بُنيت عليها صفحات هذا الموقع.
+            </p>
+          </div>
+
+          <!-- بطاقة قاموس مصغّرة في الترويسة -->
+          <div data-reveal="scale" style="--d:150ms" class="relative mx-auto hidden w-full max-w-sm lg:block" aria-hidden="true">
+            <div class="pointer-events-none absolute -inset-6 rounded-[2rem] bg-hero-gradient opacity-10 blur-3xl"></div>
+            <div class="glass-panel relative rounded-3xl border border-white/70 p-7 shadow-soft dark:border-white/10">
+              <span aria-hidden="true" class="pointer-events-none absolute -top-10 right-2 select-none text-[7rem] font-bold leading-none text-brand-100/80 dark:text-brand-900/40">”</span>
+              <p class="relative text-lg font-semibold leading-9 text-[#231536] dark:text-white">الهوية البصرية</p>
+              <p class="relative mt-3 text-sm leading-8 text-[#5D4F78] dark:text-night-300">النظام البصري المتكامل الذي يعبّر عن شخصية العلامة التجارية.</p>
+              <div class="relative mt-5 flex items-center gap-2">
+                <span class="h-2 w-2 rotate-45 bg-accent-500"></span>
+                <span class="text-[11px] text-brand-500 dark:text-brand-300">القاموس البصري للمشروع</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= مصطلحات المشروع ======================= -->
+    <section id="terms" class="section-pad relative overflow-hidden border-t border-brand-100/70 bg-white dark:border-white/5 dark:bg-[#150F22]">
+      <div class="container-site">
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div data-reveal class="card-surface card-lift border-flow p-7">
+            <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-hero-gradient text-lg font-semibold text-white">١</span>
+            <h2 class="mt-5 text-lg font-semibold text-[#231536] dark:text-white">الهوية البصرية</h2>
+            <p class="mt-3 text-sm leading-8 text-[#5D4F78] dark:text-night-300">النظام البصري المتكامل الذي يعبّر عن شخصية العلامة التجارية، ويشمل الشعار والألوان والخطوط وعناصر التصميم.</p>
+          </div>
+          <div data-reveal style="--d:80ms" class="card-surface card-lift p-7">
+            <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-100 text-lg font-semibold text-brand-700 dark:bg-brand-900/60 dark:text-brand-300">٢</span>
+            <h2 class="mt-5 text-lg font-semibold text-[#231536] dark:text-white">العلامة التجارية</h2>
+            <p class="mt-3 text-sm leading-8 text-[#5D4F78] dark:text-night-300">الصورة الذهنية والسمعة التي يكتسبها المنتج أو الشركة لدى الجمهور، وتميّزها عن المنافسين.</p>
+          </div>
+          <div data-reveal style="--d:160ms" class="card-surface card-lift relative overflow-hidden p-7">
+            <div class="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-accent-200/40 blur-2xl dark:bg-accent-700/30"></div>
+            <span class="relative inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-accent-100 text-lg font-semibold text-accent-700 dark:bg-accent-900/60 dark:text-accent-300">٣</span>
+            <h2 class="relative mt-5 text-lg font-semibold text-[#231536] dark:text-white">الشعار</h2>
+            <p class="relative mt-3 text-sm leading-8 text-[#5D4F78] dark:text-night-300">الرمز البصري المميز الذي يمثل العلامة التجارية ويعكس هويتها بشكل مختصر ومعبّر.</p>
+          </div>
+          <div data-reveal class="card-surface card-lift p-7">
+            <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-accent-100 text-lg font-semibold text-accent-700 dark:bg-accent-900/60 dark:text-accent-300">٤</span>
+            <h2 class="mt-5 text-lg font-semibold text-[#231536] dark:text-white">الخدمات الإعلانية المتكاملة</h2>
+            <p class="mt-3 text-sm leading-8 text-[#5D4F78] dark:text-night-300">منظومة متكاملة من الخدمات التسويقية والإعلانية تشمل تصميم الهوية والإعلانات والمحتوى الرقمي والمطبوعات.</p>
+          </div>
+          <div data-reveal style="--d:80ms" class="card-surface card-lift p-7">
+            <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-100 text-lg font-semibold text-brand-700 dark:bg-brand-900/60 dark:text-brand-300">٥</span>
+            <h2 class="mt-5 text-lg font-semibold text-[#231536] dark:text-white">دليل الهوية البصرية</h2>
+            <p class="mt-3 text-sm leading-8 text-[#5D4F78] dark:text-night-300">وثيقة مرجعية تحدد قواعد استخدام عناصر الهوية من شعار وألوان وخطوط، لضمان اتساق التطبيق.</p>
+          </div>
+          <div data-reveal style="--d:160ms" class="group relative overflow-hidden rounded-3xl border border-brand-100/90 shadow-card dark:border-white/10">
+            <img src="assets/img/gallery/work-01.jpg" alt="صفحة من دليل الهوية" loading="lazy" class="h-44 w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#231536]/80 via-[#231536]/10 to-transparent"></div>
+            <div class="absolute bottom-0 right-0 left-0 p-5">
+              <p class="text-sm font-medium text-white">الاتساق البصري</p>
+              <p class="mt-1 text-xs leading-6 text-white/75">توحيد العناصر في جميع التطبيقات والمنصات، بما يبني حضوراً مألوفاً وموثوقاً للعلامة.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- شريط انتقالي بين الأقسام -->
+    <section class="relative overflow-hidden border-y border-brand-100/70 bg-white/60 py-10 backdrop-blur dark:border-white/5 dark:bg-[#150F22]">
+      <div class="container-site flex flex-wrap items-center justify-between gap-4">
+        <p class="text-sm text-[#5D4F78] dark:text-night-300">المفاهيم تصبح كياناً — تعرّف على روح العلامة</p>
+        <a href="brand.html" class="btn-primary magnetic">
+          هوية تناسق
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5-5 5M6 12h12"/></svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================= التذييل ======================= -->
+  <footer class="relative overflow-hidden border-t border-brand-100/70 bg-[#FAF7FC] dark:border-white/5 dark:bg-[#0D0816]">
+    <div class="pointer-events-none absolute -top-24 right-1/4 h-64 w-64 rounded-full bg-brand-400/10 blur-3xl"></div>
+    <div class="container-site relative py-16">
+      <div class="grid gap-12 md:grid-cols-3">
+        <div>
+          <a href="index.html" class="flex items-center gap-3">
+            <span class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-hero-gradient text-lg font-semibold text-white">ت</span>
+            <span class="leading-tight">
+              <span class="block text-base font-semibold text-[#231536] dark:text-white">تناسق</span>
+              <span class="block text-[11px] tracking-[0.08em] text-brand-500 dark:text-brand-300">للحلول الإبداعية</span>
+            </span>
+          </a>
+          <p class="mt-5 max-w-xs text-sm leading-8 text-[#8B7DA5] dark:text-night-300">موقع عرض لبروبوزال مشروع تصميم هوية بصرية متكاملة لشركة ناشئة في مجال الخدمات الإعلانية المتكاملة في الجمهورية اليمنية.</p>
+          <div class="mt-6 flex items-center gap-3">
+            <span class="inline-flex h-9 items-center rounded-full bg-hero-gradient px-4 text-xs font-medium text-white">هوية متكاملة</span>
+            <span class="inline-flex h-9 items-center rounded-full border border-brand-200 px-4 text-xs text-brand-700 dark:border-white/10 dark:text-brand-300">السوق اليمني</span>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-[#231536] dark:text-white">أقسام الموقع</h4>
+          <nav class="mt-5 grid grid-cols-2 gap-x-6 gap-y-3 text-sm">
+            <a href="index.html" class="text-[#8B7DA5] transition hover:text-brand-600 dark:text-night-300 dark:hover:text-brand-300">الرئيسية</a>
+            <a href="about.html" class="text-[#8B7DA5] transition hover:text-brand-600 dark:text-night-300 dark:hover:text-brand-300">عن المشروع</a>
+            <a href="importance.html" class="text-[#8B7DA5] transition hover:text-brand-600 dark:text-night-300 dark:hover:text-brand-300">أهمية المشروع</a>
+            <a href="objectives.html" class="text-[#8B7DA5] transition hover:text-brand-600 dark:text-night-300 dark:hover:text-brand-300">أهداف المشروع</a>
+            <a href="scope.html" class="text-[#8B7DA5] transition hover:text-brand-600 dark:text-night-300 dark:hover:text-brand-300">حدود المشروع</a>
+            <a href="terms.html" class="text-[#8B7DA5] transition hover:text-brand-600 dark:text-night-300 dark:hover:text-brand-300">مصطلحات المشروع</a>
+            <a href="brand.html" class="text-[#8B7DA5] transition hover:text-brand-600 dark:text-night-300 dark:hover:text-brand-300">هوية تناسق</a>
+            <a href="works.html" class="text-[#8B7DA5] transition hover:text-brand-600 dark:text-night-300 dark:hover:text-brand-300">معرض الأعمال</a>
+            <a href="files.html" class="text-[#8B7DA5] transition hover:text-brand-600 dark:text-night-300 dark:hover:text-brand-300">ملفات المشروع</a>
+          </nav>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-[#231536] dark:text-white">بيانات المشروع</h4>
+          <ul class="mt-5 space-y-4 text-sm text-[#8B7DA5] dark:text-night-300">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-hero-gradient"></span>
+              <span><span class="font-medium text-brand-600 dark:text-brand-300">إعداد الباحث:</span> عمرو محمد السمحي</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-hero-gradient"></span>
+              <span><span class="font-medium text-brand-600 dark:text-brand-300">الإشراف:</span> د. عادل الورافي · د. ردينة جهلان</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-hero-gradient"></span>
+              <span><span class="font-medium text-brand-600 dark:text-brand-300">الإشراف:</span> أ. زياد الوصالي · أ. أصيل الزنم</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-14 flex flex-wrap items-center justify-between gap-3 border-t border-brand-100/70 pt-6 text-xs text-[#8B7DA5] dark:border-white/5 dark:text-night-400">
+        <p>© 2026 تناسق للحلول الإبداعية — مشروع تصميم هوية بصرية متكاملة</p>
+        <p class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-accent-500"></span>الجمهورية اليمنية</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- زر العودة للأعلى -->
+  <button id="back-top" type="button" aria-label="العودة للأعلى" class="fixed bottom-6 left-6 z-[60] inline-flex h-12 w-12 translate-y-20 items-center justify-center rounded-2xl bg-hero-gradient text-white opacity-0 shadow-glow transition-all duration-500 hover:-translate-y-1 active:scale-90">
+    <svg class="h-5 w-5 -rotate-90" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+  </button>
+
+</body>
+</html>
